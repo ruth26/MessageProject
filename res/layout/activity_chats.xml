@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back">
+
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:visibility="invisible">
+    </ListView>
+
+    <EditText
+        android:id="@+id/etChat"
+        android:layout_width="300dp"
+        android:layout_height="61dp"
+        android:background="#90ffffff"
+        android:layout_alignParentBottom="true"
+        android:hint="  Write a message"
+        android:onClick="writeMessage"/>
+
+        <TextView
+            android:id="@+id/myUserId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="  userId"/>
+        <TextView
+            android:id="@+id/message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="  message"
+            android:textSize="17sp"
+            android:background="#90ffffff"
+            android:layout_below="@id/myUserId"/>
+
+    <TextView
+        android:id="@+id/sendMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="  message"
+        android:textSize="17sp"
+        android:layout_alignParentRight="true"
+        android:background="#90ffffff"
+        android:layout_below="@id/myUserId"/>
+
+
+    <TextClock
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="00/00/00"
+            android:textAllCaps="false"
+            android:textStyle="italic"
+            android:layout_toRightOf="@id/message"/>
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_width="60dp"
+        android:layout_height="61dp"
+        android:text="send"
+        android:textSize="17sp"
+        android:textColor="#51b3ff"
+        android:layout_toRightOf="@+id/etChat"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:background="#00ffe1"
+        android:onClick="sendToChat" />
+
+    <ImageButton
+        android:id="@+id/camera"
+        android:layout_width="60dp"
+        android:layout_height="61dp"
+        android:src="@drawable/camera"
+        android:background="#afc0f2ed"
+        android:layout_alignParentBottom="true"
+        android:layout_toLeftOf="@id/btnSend"
+        android:onClick="pickImg"/>
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+
+</RelativeLayout>
